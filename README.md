@@ -28,6 +28,8 @@ These two colorschemes will also be available :
 - [molokai](https://github.com/fatih/molokai) (default)
 - [monokai](https://github.com/sickill/vim-monokai)
 
+![go-vim-install](https://dl.dropboxusercontent.com/u/174404/vim-go-2.png)
+
 ## Workspace setup
 
 The script will install in your workspace :

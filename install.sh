@@ -36,7 +36,6 @@ install_vim() {
     
     # Colorschemes
     cd ~/.vim/colors
-
     curl -sLO "https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim"
     curl -sLO "https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim"
 

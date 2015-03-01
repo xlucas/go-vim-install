@@ -6,7 +6,7 @@ Easy environment setup for Vim addicts and go developers.
 While there are a lot of great plugins of all kinds for Vim made by amazing people, that's alway a hassle to retrieve them all, configure your `.vimrc`, install colorschemes and extra stuff to get everything eventually working. This little installer for ubuntu make the life simpler for go development with Vim, by providing a command line with 3 options to either :
 - Download and install go from a remote tarball containing the go version of your choice (option `-go`).
 - Setup a fully working Vim environment with amazing plugins, third party helpers and colorschemes (option `-vim`).
-- Setup your go workspace with a few useful packages with option (option `-work`).
+- Setup your go workspace with required go tools for Vim plugins (option `-work`).
 
 Examples :
 

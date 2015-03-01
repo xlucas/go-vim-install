@@ -18,3 +18,7 @@ filetype plugin indent on
 " Tagbar plugin 
 nmap <F8> :TagbarToggle<CR>
 autocmd VimEnter * nested :TagbarOpen
+
+" Airline plugin
+let g:airline_theme = 'jellybeans'
+let g:airline_powerline_fonts=1

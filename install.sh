@@ -17,7 +17,7 @@ install_vim() {
     mv ~/.vimrc ~/.vimrc.old
 
     # Basic requirements
-    sudo apt-get install -y git vim build-essential cmake python-dev ctags
+    sudo apt-get install -y git vim build-essential cmake python-dev python-pip python-setuptools ctags
     mkdir -p ~/.vim/{autoload,bundle,colors}
     
     # Pathogen
@@ -29,6 +29,8 @@ install_vim() {
     git clone "https://github.com/majutsushi/tagbar.git"
     git clone "https://github.com/fatih/vim-go.git"
     git clone "https://github.com/Valloric/YouCompleteMe.git"
+    git clone "https://github.com/bling/vim-airline.git"
+    git clone "https://github.com/tpope/vim-fugitive.git"
     
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive
@@ -41,8 +43,22 @@ install_vim() {
 
     cd $cwd
 
-    curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-setup/master/.vimrc"
-    
+    # Powerline
+    pip install --user powerline-status
+
+    mkdir -p ~/.fonts/
+    mkdir -p ~/.config/fontconfig/conf.d/
+
+    wget -P ~/.fonts "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf"
+    wget -P ~/.config/fontconfig/conf.d "https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf"
+
+    fc-cache -vf ~/.fonts
+
+    echo "export PATH=$PATH:/$(readlink -f ~/.local/bin)" >> .bash_profile
+
+    # Vimrc
+    curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
+        
     exit 0
 }
 

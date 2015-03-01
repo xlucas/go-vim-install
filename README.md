@@ -15,6 +15,8 @@ Examples :
 - `./install.sh -vim`
 - `./install.sh -work ~/Workspace/go`
 
+You will need to force `. ~/.bash_profile` to reload environment variables after this.
+
 ## Vim environment
 
 The script will install pathogen and the following plugins :
@@ -22,8 +24,11 @@ The script will install pathogen and the following plugins :
 - [vim-go](https://github.com/fatih/vim-go) (many great features like autoformat on save)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (live completion based on types)
 - [tagbar](https://github.com/majutsushi/tagbar) (display code metadata)
+- [fugitive](https://github.com/tpope/vim-fugitive) (git data in vim)
+- [vim-airline](https://github.com/bling/vim-airline) (container for amazing line bars)
+- [powerline](https://github.com/powerline/powerline) (superb line bar)
 
-These two colorschemes will also be available :
+These two colorschemes will be available :
 
 - [molokai](https://github.com/fatih/molokai) (default)
 - [monokai](https://github.com/sickill/vim-monokai)

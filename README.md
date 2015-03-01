@@ -23,7 +23,7 @@ The script will install pathogen and the following plugins :
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (live completion based on types)
 - [tagbar](https://github.com/majutsushi/tagbar) (display code metadata)
 
-These two colorschemes will also be available :
+These two colorschemes will also be retrieved :
 
 - [molokai](https://github.com/fatih/molokai) (default)
 - [monokai](https://github.com/sickill/vim-monokai)

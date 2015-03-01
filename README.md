@@ -14,7 +14,9 @@ Examples :
 - `./install.sh -vim`
 - `./install.sh -work ~/Workspace/go`
 
-Then `. ~/.bash_profile` and you are done !
+Be aware to run `. ~/.bash_profile` after each command so environment variables are up to date.
+
+That's all !
 
 ## Vim environment
 

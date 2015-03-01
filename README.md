@@ -27,6 +27,7 @@ The script will install pathogen and the following plugins :
 - [fugitive](https://github.com/tpope/vim-fugitive) (git data in vim)
 - [vim-airline](https://github.com/bling/vim-airline) (container for amazing line bars)
 - [powerline](https://github.com/powerline/powerline) (superb line bar)
+- [NERDTree](https://github.com/scrooloose/nerdtree) and [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs) (awesome file explorer panel)
 
 These two colorschemes will be available :
 

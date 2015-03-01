@@ -31,6 +31,8 @@ install_vim() {
     git clone "https://github.com/Valloric/YouCompleteMe.git"
     git clone "https://github.com/bling/vim-airline.git"
     git clone "https://github.com/tpope/vim-fugitive.git"
+    git clone "https://github.com/scrooloose/nerdtree.git"
+    git clone "https://github.com/jistr/vim-nerdtree-tabs.git"
     
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive
@@ -78,6 +80,13 @@ install_ws() {
 
     go get github.com/axw/gocov/gocov
     go get github.com/jstemmer/gotags
+    go get github.com/nsf/gocode
+    go get github.com/rogpeppe/godef
+    go get golang.org/x/tools/cmd/goimports
+    go get golang.org/x/tools/cmd/oracle
+    go get golang.org/x/tools/cmd/gorename
+    go get github.com/golang/lint/golint
+    go get github.com/kisielk/errcheck
 
     cd $cwd 
 

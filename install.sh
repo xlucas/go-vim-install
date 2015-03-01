@@ -55,7 +55,7 @@ install_vim() {
 
     fc-cache -vf ~/.fonts
 
-    echo "export PATH=\$PATH:/$(readlink -f ~/.local/bin)" >> ~/.bash_profile
+    echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.bash_profile
 
     # Vimrc
     curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"

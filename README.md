@@ -11,9 +11,9 @@ The idea here is to provide 3 commands to either :
 
 Examples :
 
-`./install.sh -go https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz`
-`./install.sh -vim`
-`./install.sh -work ~/Workspace/go`
+- `./install.sh -go https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz`
+- `./install.sh -vim`
+- `./install.sh -work ~/Workspace/go`
 
 ## Vim environment
 

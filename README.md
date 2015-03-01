@@ -48,5 +48,5 @@ The following shortcuts are included in the `.vimrc` file :
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
 - <kbd>F2</kbd> : Create a new tab
 - <kbd>F3</kbd> : Close the current tab
-- <kbd>CTRL</kbd>+<kbd>PageUp</kbd> : Next tab
-- <kbd>CTRL</kbd>+<kbd>PageDown</kbd> : Previous tab
+- <kbd>CTRL</kbd> + <kbd>PageUp</kbd> : Go to the next tab
+- <kbd>CTRL</kbd> + <kbd>PageDown</kbd> : Go to the previous tab

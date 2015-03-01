@@ -18,7 +18,7 @@ Then `. ~/.bash_profile` and you are done !
 
 ## Vim environment
 
-The script will install pathogen and the following plugins :
+The script will install [pathogen](https://github.com/tpope/vim-pathogen) and the following plugins :
 
 - [vim-go](https://github.com/fatih/vim-go)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)

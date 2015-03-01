@@ -40,14 +40,14 @@ These two colorschemes will be available :
 ## Workspace setup
 
 The script will install in your workspace :
-- [gocov](https://github.com/axw/gocov/gocov)
+- [gocov](https://github.com/axw/gocov)
 - [gotags](https://github.com/jstemmer/gotags)
 - [gocode](https://github.com/nsf/gocode)
 - [godef](https://github.com/rogpeppe/godef)
 - [goimports](https://golang.org/x/tools/cmd/goimports)
 - [oracle](https://golang.org/x/tools/cmd/oracle)
 - [gorename](https://golang.org/x/tools/cmd/gorename)
-- [golint](https://github.com/golang/lint/golint)
+- [golint](https://github.com/golang/lint)
 - [errcheck](https://github.com/kisielk/errcheck)
 
 ## Shortcuts

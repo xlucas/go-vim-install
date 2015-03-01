@@ -17,6 +17,8 @@ filetype plugin indent on
 
 " Tagbar plugin 
 autocmd VimEnter * nested :TagbarOpen
+autocmd VimEnter * nested :NERDTreeFind
+autocmd VimEnter * nested :NERDTreeFocusToggle
 
 " Go-vim plugin
 let g:go_highlight_functions = 1
@@ -34,7 +36,6 @@ let g:airline_powerline_fonts = 1
 let g:nerdtree_tabs_smart_startup_focus = 2
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:nerdtree_tabs_focus_on_files = 1
-let g:nerdtree_tabs_autofind = 1
 
 " Shortcuts remap
 nmap <F8> :TagbarToggle<CR>

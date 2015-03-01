@@ -21,26 +21,34 @@ You will need to force `. ~/.bash_profile` to reload environment variables after
 
 The script will install pathogen and the following plugins :
 
-- [vim-go](https://github.com/fatih/vim-go) (many great features like autoformat on save)
-- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) (live completion based on types)
-- [tagbar](https://github.com/majutsushi/tagbar) (display code metadata)
-- [fugitive](https://github.com/tpope/vim-fugitive) (git data in vim)
-- [vim-airline](https://github.com/bling/vim-airline) (container for amazing line bars)
-- [powerline](https://github.com/powerline/powerline) (superb line bar)
-- [NERDTree](https://github.com/scrooloose/nerdtree) and [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs) (awesome file explorer panel)
+- [vim-go](https://github.com/fatih/vim-go)
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+- [tagbar](https://github.com/majutsushi/tagbar)
+- [fugitive](https://github.com/tpope/vim-fugitive)
+- [vim-airline](https://github.com/bling/vim-airline)
+- [powerline](https://github.com/powerline/powerline)
+- [NERDTree](https://github.com/scrooloose/nerdtree)
+- [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
 
 These two colorschemes will be available :
 
-- [molokai](https://github.com/fatih/molokai) (default)
+- [molokai](https://github.com/fatih/molokai)
 - [monokai](https://github.com/sickill/vim-monokai)
 
-![go-vim-install](https://dl.dropboxusercontent.com/u/174404/vim-go-2.png)
+![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
 
 ## Workspace setup
 
 The script will install in your workspace :
-- [gocov](https://github.com/axw/gocov) (code coverage tools)
-- [gotags](https://github.com/jstemmer/gotags) (required for vim tagbar)
+- [gocov](https://github.com/axw/gocov/gocov)
+- [gotags](https://github.com/jstemmer/gotags)
+- [gocode](https://github.com/nsf/gocode)
+- [godef](https://github.com/rogpeppe/godef)
+- [goimports](https://golang.org/x/tools/cmd/goimports)
+- [oracle](https://golang.org/x/tools/cmd/oracle)
+- [gorename](https://golang.org/x/tools/cmd/gorename)
+- [golint](https://github.com/golang/lint/golint)
+- [errcheck](https://github.com/kisielk/errcheck)
 
 ## Shortcuts
 
@@ -49,5 +57,6 @@ The following shortcuts are included in the `.vimrc` file :
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
 - <kbd>F2</kbd> : Create a new tab
 - <kbd>F3</kbd> : Close the current tab
-- <kbd>CTRL</kbd> + <kbd>PageUp</kbd> : Go to the next tab
-- <kbd>CTRL</kbd> + <kbd>PageDown</kbd> : Go to the previous tab
+- <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
+- <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
+

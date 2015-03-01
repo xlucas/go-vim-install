@@ -38,10 +38,9 @@ install_vim() {
     git submodule update --init --recursive
     bash install.sh
     
-    # Colorschemes
+    # Colorscheme
     cd ~/.vim/colors
-    curl -sLO "https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim"
-    curl -sLO "https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim"
+    curl -sLO "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
 
     cd $cwd
 

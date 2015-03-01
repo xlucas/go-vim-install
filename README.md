@@ -30,10 +30,7 @@ The script will install pathogen and the following plugins :
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
 
-These two colorschemes will be available :
-
-- [molokai](https://github.com/fatih/molokai)
-- [monokai](https://github.com/sickill/vim-monokai)
+The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
 ![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
 

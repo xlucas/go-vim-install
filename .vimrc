@@ -8,7 +8,6 @@ set shell=sh
 
 " Syntax highlighting
 syntax on
-colorscheme monokai
 colorscheme molokai
 
 " Pathogen
@@ -45,5 +44,8 @@ let g:nerdtree_tabs_focus_on_files = 1
 nmap <F8> :TagbarToggle<CR>
 nmap <F2> :tabnew<CR>
 nmap <F3> :tabclose<CR>
+nmap <F4> :set hlsearch<CR>
+nmap <F5> :nohlsearch<CR>
+nmap <F8> :TagbarToggle<CR>
 nmap <C-Down> :tabprevious<CR>
 nmap <C-Up> :tabnext<CR>

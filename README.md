@@ -57,6 +57,8 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
 - <kbd>F2</kbd> : Create a new tab
 - <kbd>F3</kbd> : Close the current tab
+- <kbd>F4</kbd> : Enable search highlight
+- <kbd>F5</kbd> : Disable search highlight
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 

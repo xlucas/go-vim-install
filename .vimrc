@@ -16,9 +16,14 @@ execute pathogen#infect()
 filetype plugin indent on
 
 " Tagbar plugin 
-nmap <F8> :TagbarToggle<CR>
 autocmd VimEnter * nested :TagbarOpen
 
 " Airline plugin
 let g:airline_theme = 'jellybeans'
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
+
+" Shortcuts remap
+nmap <F8>       :TagbarToggle<CR>
+nmap <F2>       :tabnew<CR>
+nmap <C-Up>     :tabprevious<CR>
+nmap <C-Down>   :tabnext<CR>

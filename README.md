@@ -31,7 +31,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
-Here's a screenshot of what the environement will look like :
+Here's a screenshot of what the environment will look like :
 
 ![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
 

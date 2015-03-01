@@ -28,8 +28,12 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
 
+" YouCompleteMe plugin
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
 " Airline plugin
-let g:airline_theme = 'dark'
+let g:airline_theme = 'badwolf'
 let g:airline_powerline_fonts = 1
 
 " NERDTree & NERDTree tabs plugins

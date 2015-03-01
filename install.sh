@@ -41,7 +41,7 @@ install_vim() {
 
     cd $cwd
 
-    curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-setup/master/.vimrc"
+    curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
     
     exit 0
 }

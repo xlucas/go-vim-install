@@ -43,6 +43,7 @@ install_vim() {
 
     cd $cwd
 
+<<<<<<< HEAD
     # Powerline
     pip install --user powerline-status
 
@@ -59,6 +60,10 @@ install_vim() {
     # Vimrc
     curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
         
+=======
+    curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
+    
+>>>>>>> e65a23741fb29c079b60565c5c71e6c67b5621c3
     exit 0
 }
 

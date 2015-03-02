@@ -14,7 +14,7 @@ colorscheme molokai
 execute pathogen#infect()
 filetype plugin indent on
 
-" Tagbar plugin 
+" Tagbar plugin
 autocmd VimEnter * nested :TagbarOpen
 autocmd VimEnter * nested :NERDTreeFind
 autocmd VimEnter * nested :NERDTreeFocusToggle
@@ -26,6 +26,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
+let g:go_highlight_trailing_whitespace_error = 0
 
 " YouCompleteMe plugin
 let g:ycm_add_preview_to_completeopt = 1
@@ -39,6 +40,15 @@ let g:airline_powerline_fonts = 1
 let g:nerdtree_tabs_smart_startup_focus = 2
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:nerdtree_tabs_focus_on_files = 1
+
+" Syntastic plugin
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Shortcuts remap
 nmap <F8> :TagbarToggle<CR>

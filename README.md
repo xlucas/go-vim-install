@@ -14,7 +14,7 @@ Examples :
 - `./install.sh -vim`
 - `./install.sh -work ~/Workspace/go`
 
-Be aware to run `. ~/.bash_profile` after each command so environment variables are up to date.
+Be aware to run `. ~/.profile` after a step is done so environment variables are up to date.
 
 That's all !
 
@@ -30,6 +30,8 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [powerline](https://github.com/powerline/powerline)
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
+- [syntastic](https://github.com/scrooloose/syntastic.git)
+- [better-whitespace](https://github.com/ntpeters/vim-better-whitespace.git)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 

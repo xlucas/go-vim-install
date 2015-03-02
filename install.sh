@@ -4,7 +4,7 @@ install_go() {
 
     wget -q -O - /tmp/golang.tar.gz "$1" | sudo tar -C /usr/local -xzvf -
 
-    echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.bash_profile
+    echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
 
     exit 0
 }
@@ -19,7 +19,7 @@ install_vim() {
     # Basic requirements
     sudo apt-get install -y git vim build-essential cmake python-dev python-pip python-setuptools ctags
     mkdir -p ~/.vim/{autoload,bundle,colors}
-    
+
     # Pathogen
     cd ~/.vim/autoload
     curl -sLO "https://tpo.pe/pathogen.vim"
@@ -33,11 +33,13 @@ install_vim() {
     git clone "https://github.com/tpope/vim-fugitive.git"
     git clone "https://github.com/scrooloose/nerdtree.git"
     git clone "https://github.com/jistr/vim-nerdtree-tabs.git"
-    
+    git clone "https://github.com/scrooloose/syntastic.git"
+    git clone "https://github.com/ntpeters/vim-better-whitespace.git"
+
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive
     bash install.sh
-    
+
     # Colorscheme
     cd ~/.vim/colors
     curl -sLO "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
@@ -55,11 +57,11 @@ install_vim() {
 
     fc-cache -vf ~/.fonts
 
-    echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.bash_profile
+    echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.profile
 
     # Vimrc
     curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
-        
+
     exit 0
 }
 
@@ -70,10 +72,10 @@ install_ws() {
 
     mkdir -p $1
 
-    echo "export GOPATH=$1"             >> ~/.bash_profile
-    echo "export PATH=\$PATH:$1/bin"    >> ~/.bash_profile
-   
-    . ~/.bash_profile
+    echo "export GOPATH=$1"             >> ~/.profile
+    echo "export PATH=\$PATH:$1/bin"    >> ~/.profile
+
+    . ~/.profile
 
     cd $GOPATH
 
@@ -87,7 +89,7 @@ install_ws() {
     go get github.com/golang/lint/golint
     go get github.com/kisielk/errcheck
 
-    cd $cwd 
+    cd $cwd
 
     exit 0
 }

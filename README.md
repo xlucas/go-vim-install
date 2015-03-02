@@ -3,7 +3,7 @@ Easy environment setup for Vim addicts and go developers.
 
 ## Usage
 
-While there are a lot of great plugins of all kinds for Vim made by amazing people, that's alway a hassle to retrieve them all, configure your `.vimrc`, install colorschemes and extra stuff to get everything eventually working. This little installer for ubuntu make the life simpler for go development with Vim, by providing a command line with 3 options to either :
+While there are a lot of great plugins of all kinds for Vim made by amazing people, that's always a hassle to retrieve them all, configure your `.vimrc`, install colorschemes and extra stuff to get everything eventually working. This little installer for ubuntu make the life simpler for go development with Vim, by providing a command line with 3 options to either :
 - Download and install go from a remote tarball containing the go version of your choice (option `-go`).
 - Setup a fully working Vim environment with amazing plugins, third party helpers and colorschemes (option `-vim`).
 - Setup your go workspace with required go tools for Vim plugins (option `-work`).
@@ -52,7 +52,7 @@ The script will install these packages in your workspace :
 - [golint](https://github.com/golang/lint)
 - [errcheck](https://github.com/kisielk/errcheck)
 
-Most of them are required to have Vim plugins fully working. Then you can run crazy things from Vim, like test units with (`:GoTest`), coverage report with (`:GoCoverage`), refactor an element name and its references (`:GoRename`), do code inspection and error checking (`:GoDoc`, `:GoInfo`, `:GoCallers`, `:GoCallees`, `:GoErrCheck` ...), build your packages (`:GoBuild`) and much more. Obviously, you can also remap all these actions to shortcuts of your choice ! Check the go-vim plugin documentation to get [a full list](https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt) of available features.
+Most of them are required to have Vim plugins fully working. Then you can run crazy things from Vim, like test units with (`:GoTest`), coverage report with (`:GoCoverage`), refactor an element name and its references (`:GoRename`), do code inspection and error checking (`:GoDoc`, `:GoInfo`, `:GoCallers`, `:GoCallees`, `:GoErrCheck` ...), build your packages (`:GoBuild`), detect uncheked error (`:GoErrCheck`) and much more. Obviously, you can also remap all these actions to shortcuts of your choice in your `.vimrc` ! Check the go-vim plugin documentation to get [a full list](https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt) of Go-specific features. If you don't know what other plugins are doing, you will find some other tasty functionnalities in related documentations !
 
 ## Shortcuts
 

@@ -30,8 +30,8 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [powerline](https://github.com/powerline/powerline)
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
-- [syntastic](https://github.com/scrooloose/syntastic.git)
-- [better-whitespace](https://github.com/ntpeters/vim-better-whitespace.git)
+- [syntastic](https://github.com/scrooloose/syntastic)
+- [better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 

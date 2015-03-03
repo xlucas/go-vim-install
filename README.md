@@ -39,6 +39,8 @@ Here's a screenshot of what the environment will look like :
 
 ![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
 
+On this screenshot the terminal font is Ubuntu Mono (size : 12).
+
 ## Workspace setup
 
 The script will install these packages in your workspace :

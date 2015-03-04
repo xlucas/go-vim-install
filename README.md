@@ -32,6 +32,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [NERDTree-tabs](https://github.com/jistr/vim-nerdtree-tabs)
 - [syntastic](https://github.com/scrooloose/syntastic)
 - [better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
+- [gundo.vim](https://github.com/sjl/gundo.vim)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
@@ -62,6 +63,8 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F3</kbd> : Close the current tab
 - <kbd>F4</kbd> : Enable search highlight
 - <kbd>F5</kbd> : Disable search highlight
+- <kbd>F6</kbd> : Show/hide the file tree
+- <kbd>F7</kbd> : Show/hide the undo tree
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab

@@ -35,6 +35,7 @@ install_vim() {
     git clone "https://github.com/jistr/vim-nerdtree-tabs.git"
     git clone "https://github.com/scrooloose/syntastic.git"
     git clone "https://github.com/ntpeters/vim-better-whitespace.git"
+    git clone "https://github.com/sjl/gundo.vim.git"
 
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive

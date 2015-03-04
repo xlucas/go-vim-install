@@ -51,11 +51,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Shortcuts remap
-nmap <F8> :TagbarToggle<CR>
-nmap <F2> :tabnew<CR>
-nmap <F3> :tabclose<CR>
-nmap <F4> :set hlsearch<CR>
-nmap <F5> :nohlsearch<CR>
-nmap <F8> :TagbarToggle<CR>
-nmap <C-Down> :tabprevious<CR>
-nmap <C-Up> :tabnext<CR>
+nmap  <F2>      :tabnew<CR>
+nmap  <F3>      :tabclose<CR>
+nmap  <F4>      :set hlsearch<CR>
+nmap  <F5>      :nohlsearch<CR>
+nmap  <F6>      :NERDTreeTabsToggle<CR>
+nmap  <F7>      :GundoToggle<CR>
+nmap  <F8>      :TagbarToggle<CR>
+nmap  <C-Down>  :tabprevious<CR>
+nmap  <C-Up>    :tabnext<CR>

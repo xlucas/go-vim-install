@@ -52,10 +52,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Shortcuts remap
-map   ^[OA      <up>
-map   ^[OB      <down>
-map   ^[OC      <right>
-map   ^[OD      <left>
 nmap  <F2>      :tabnew<CR>
 nmap  <F3>      :tabclose<CR>
 nmap  <F4>      :set hlsearch<CR>

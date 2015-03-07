@@ -4,11 +4,17 @@ set tabstop=4
 set expandtab
 set number
 set selection=exclusive
-set shell=sh
+set shell=/bin/sh
+set autoindent
+set autoread
 
 " Syntax highlighting
 syntax on
 colorscheme molokai
+
+" Closetag script
+autocmd Filetype html let g:closetag_html_style=1
+autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 
 " Pathogen
 execute pathogen#infect()

@@ -74,3 +74,4 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 - <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding
+- <kbd>CTRL</kbd> + <kbd>_</kbd> : Autoclose xml/html tag(s) (repeat to close several ones)

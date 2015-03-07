@@ -18,7 +18,7 @@ install_vim() {
 
     # Basic requirements
     sudo apt-get install -y git vim build-essential cmake python-dev python-pip python-setuptools ctags
-    mkdir -p ~/.vim/{autoload,bundle,colors}
+    mkdir -p ~/.vim/{autoload,bundle,colors,scripts}
 
     # Pathogen
     cd ~/.vim/autoload
@@ -47,6 +47,9 @@ install_vim() {
     curl -sLO "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
 
     cd $cwd
+
+    # Closetag script
+    curl -sL "http://vim.sourceforge.net/scripts/download_script.php?src_id=4318" -o ~/.vim/scripts/closetag.vim
 
     # Powerline
     pip install --user powerline-status

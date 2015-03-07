@@ -25,9 +25,12 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_fmt_command = "goimports"
+
+" Emmet plugin
+let g:user_emmet_leader_key='<C-C>'
 
 " YouCompleteMe plugin
 let g:ycm_add_preview_to_completeopt = 1

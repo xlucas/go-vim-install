@@ -33,6 +33,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [syntastic](https://github.com/scrooloose/syntastic)
 - [better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 - [gundo.vim](https://github.com/sjl/gundo.vim)
+- [emmet-vim](https://github.com/mattn/emmet-vim)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
@@ -72,4 +73,4 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
-
+- <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding

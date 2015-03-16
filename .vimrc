@@ -7,6 +7,7 @@ set selection=exclusive
 set shell=/bin/sh
 set autoindent
 set autoread
+set showcmd
 
 " Syntax highlighting
 syntax on

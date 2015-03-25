@@ -62,6 +62,9 @@ install_vim() {
 
     fc-cache -vf ~/.fonts
 
+    # Monaco font
+    wget -L -O - https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
+
     echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.profile
 
     # Vimrc

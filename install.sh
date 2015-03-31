@@ -37,6 +37,7 @@ install_vim() {
     git clone "https://github.com/ntpeters/vim-better-whitespace.git"
     git clone "https://github.com/sjl/gundo.vim.git"
     git clone "https://github.com/mattn/emmet-vim.git"
+    git clone "https://github.com/Townk/vim-autoclose.git"
 
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive

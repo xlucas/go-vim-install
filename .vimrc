@@ -8,6 +8,7 @@ set shell=/bin/sh
 set autoindent
 set autoread
 set showcmd
+set nocompatible
 
 " Syntax highlighting
 syntax on

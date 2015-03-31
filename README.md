@@ -1,6 +1,13 @@
 # go-vim-install
 Easy environment setup for Vim addicts and go developers.
 
+## Install
+
+```
+wget https://raw.githubusercontent.com/xlucas/go-vim-install/master/install.sh
+chmod +x install.sh
+```
+
 ## Usage
 
 While there are a lot of great plugins of all kinds for Vim made by amazing people, that's always a hassle to retrieve them all, configure your `.vimrc`, install colorschemes and extra stuff to get everything eventually working. This little installer for ubuntu make the life simpler for go development with Vim, by providing a command line with 3 options to either :
@@ -42,7 +49,7 @@ Here's a screenshot of what the environment will look like :
 
 ![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
 
-On this screenshot the terminal font is Ubuntu Mono (size : 12).
+The script will install the Monaco font. Set it with a size between 11 and 12 in your terminal configuration.
 
 ## Workspace setup
 

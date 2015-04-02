@@ -3,10 +3,17 @@ Easy environment setup for Vim addicts and go developers.
 
 ## Install
 
+Hereinafter are two easy ways to get your vim environment ready for go development.
+
+###### Standard
+
 ```
 wget https://raw.githubusercontent.com/xlucas/go-vim-install/master/install.sh
 chmod +x install.sh
 ```
+
+###### Vagrant
+If you want to boot up a clean Ubuntu VM with a GUI and all the features ready to be used, you can use [this gist](https://gist.github.com/xlucas/a7e9e56db314aafada2f) and customize it easily if necessary (like removing the french keyboard layout).
 
 ## Usage
 
@@ -50,10 +57,6 @@ Here's a screenshot of what the environment will look like :
 ![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
 
 The script will install the Monaco font. Set it with a size between 11 and 12 in your terminal configuration.
-
-## Vagrant
-
-If you want to boot up a clean Ubuntu VM with a GUI and all of this ready to be used, you can look [at this gist](https://gist.github.com/xlucas/a7e9e56db314aafada2f) and customize it easily if necessary (like removing the french keyboard layout).
 
 ## Workspace setup
 

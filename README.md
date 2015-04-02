@@ -13,7 +13,7 @@ chmod +x install.sh
 ```
 
 ###### Vagrant
-If you want to boot up a clean Ubuntu VM with a GUI and all the features ready to be used, you can use [this gist](https://gist.github.com/xlucas/a7e9e56db314aafada2f) and customize it easily if necessary (like removing the french keyboard layout).
+If you want to boot up a clean Ubuntu VM with a GUI and all the features ready to be used, you can use [this gist](https://gist.github.com/xlucas/a7e9e56db314aafada2f).
 
 ## Usage
 

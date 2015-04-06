@@ -44,6 +44,11 @@ let g:user_emmet_leader_key='<C-C>'
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
+" DelimitMate plugin
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+let delimitMate_jump_expansion = 1
+
 " Airline plugin
 let g:airline_theme = 'badwolf'
 let g:airline_powerline_fonts = 1

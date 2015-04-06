@@ -87,7 +87,7 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F6</kbd> : Show/hide the file tree
 - <kbd>F7</kbd> : Show/hide the undo tree
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
-- <kbd>F8</kbd> : Maximize/restore current window
+- <kbd>F9</kbd> : Maximize/restore current window
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 - <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding

@@ -75,6 +75,6 @@ nmap  <F5>          :nohlsearch<CR>
 nmap  <F6>          :NERDTreeTabsToggle<CR>
 nmap  <F7>          :GundoToggle<CR>
 nmap  <F8>          :TagbarToggle<CR>
+nmap  <silent><F9>  :MaximizerToggle<CR>
 nmap  <C-Down>      :tabprevious<CR>
 nmap  <C-Up>        :tabnext<CR>
-nmap  <silent><F3>  :MaximizerToggle<CR>

@@ -38,6 +38,7 @@ install_vim() {
     git clone "https://github.com/sjl/gundo.vim.git"
     git clone "https://github.com/mattn/emmet-vim.git"
     git clone "https://github.com/Raimondi/delimitMate.git"
+    git clone "https://github.com/szw/vim-maximizer.git"
 
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive

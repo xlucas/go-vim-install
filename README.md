@@ -48,7 +48,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 - [gundo.vim](https://github.com/sjl/gundo.vim)
 - [emmet-vim](https://github.com/mattn/emmet-vim)
-- [vim-autoclose](https://github.com/Townk/vim-autoclose)
+- [delimitMate](https://github.com/Raimondi/delimitMate)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 

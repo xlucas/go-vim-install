@@ -1,5 +1,5 @@
 # go-vim-install
-Easy environment setup for Vim addicts and go developers.
+Easy environment setup for Vim addicts and go developers on Ubuntu.
 
 ## Install
 

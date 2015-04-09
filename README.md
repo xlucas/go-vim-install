@@ -50,7 +50,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [emmet-vim](https://github.com/mattn/emmet-vim)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [vim-maximizer](https://github.com/szw/vim-maximizer)
-- [vim-tabular](https://github.com/godlygeek/tabular)
+- [tabular](https://github.com/godlygeek/tabular)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 

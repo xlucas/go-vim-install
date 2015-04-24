@@ -17,7 +17,7 @@ colorscheme molokai
 " Closetag script
 autocmd Filetype html let g:closetag_html_style=1
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
-autocmd Filetype go autocmd BufWritePre <buffer> GoInstall
+autocmd BufWritePost * :GoInstall
 
 " Pathogen
 execute pathogen#infect()

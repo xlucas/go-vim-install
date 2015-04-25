@@ -51,6 +51,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [delimitMate](https://github.com/Raimondi/delimitMate)
 - [vim-maximizer](https://github.com/szw/vim-maximizer)
 - [tabular](https://github.com/godlygeek/tabular)
+- [ultisnips](https://github.com/sirver/ultisnips)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
@@ -95,3 +96,6 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 - <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding
 - <kbd>CTRL</kbd> + <kbd>_</kbd> : Autoclose xml/html tag(s) (repeat to close several ones)
+- <kbd>CTRL</kbd> + <kbd>j</kbd> : Expand snippet
+- <kbd>CTRL</kbd> + <kbd>n</kbd> : Go to next snippet item 
+- <kbd>CTRL</kbd> + <kbd>p</kbd> : Go to previous snippet item

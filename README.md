@@ -90,6 +90,7 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
 - <kbd>F9</kbd> : Maximize/restore current window
 - <kbd>F10</kbd> : Align text using ',' as a delimiter
+- <kbd>F12</kbd> : Call `column -t` on the visual selection and replace it with the result
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 - <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding

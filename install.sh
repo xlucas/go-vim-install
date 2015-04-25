@@ -71,6 +71,9 @@ install_vim() {
 
     echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.profile
 
+    # Snippets
+    curl -sL -o ~/.vim/bundle/vim-go/gosnippets/UltiSnips/go.snippets "https://raw.githubusercontent.com/xlucas/go-vim-install/master/go.snippets"
+
     # Vimrc
     curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
 

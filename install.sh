@@ -40,6 +40,7 @@ install_vim() {
     git clone "https://github.com/Raimondi/delimitMate.git"
     git clone "https://github.com/szw/vim-maximizer.git"
     git clone "https://github.com/godlygeek/tabular.git"
+    git clone "https://github.com/SirVer/ultisnips.git"
 
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive

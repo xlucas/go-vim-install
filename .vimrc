@@ -79,6 +79,6 @@ nmap  <F8>          :TagbarToggle<CR>
 nmap  <silent><F9>  :MaximizerToggle<CR>
 nmap  <F10>         :Tabularize /,\zs<CR>
 vmap  <F10>         :Tabularize /,\zs<CR>
-vmap  <F12>         %!column -t<CR>
+vmap  <F12>         :Tabularize / /<CR>
 nmap  <C-Down>      :tabprevious<CR>
 nmap  <C-Up>        :tabnext<CR>

@@ -17,7 +17,7 @@ install_vim() {
     mv ~/.vimrc ~/.vimrc.old
 
     # Basic requirements
-    sudo apt-get install -y git vim build-essential cmake python-dev python-pip python-setuptools ctags
+    sudo apt-get install -y git vim build-essential cmake python-dev python-pip python-setuptools ctags xdg-utils npm
     mkdir -p ~/.vim/{autoload,bundle,colors,scripts}
 
     # Pathogen
@@ -41,6 +41,7 @@ install_vim() {
     git clone "https://github.com/szw/vim-maximizer.git"
     git clone "https://github.com/godlygeek/tabular.git"
     git clone "https://github.com/SirVer/ultisnips.git"
+    git clone "https://github.com/suan/vim-instant-markdown.git"
 
     cd ~/.vim/bundle/YouCompleteMe
     git submodule update --init --recursive
@@ -73,6 +74,9 @@ install_vim() {
 
     # Snippets
     curl -sL -o ~/.vim/bundle/vim-go/gosnippets/UltiSnips/go.snippets "https://raw.githubusercontent.com/xlucas/go-vim-install/master/go.snippets"
+
+    # Instant markdown
+    sudo npm -g install instant-markdown-d
 
     # Vimrc
     curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"

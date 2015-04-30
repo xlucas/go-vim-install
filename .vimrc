@@ -4,7 +4,7 @@ set tabstop=4
 set expandtab
 set number
 set selection=exclusive
-set shell=/bin/sh
+set shell=/bin/bash
 set autoindent
 set autoread
 set showcmd

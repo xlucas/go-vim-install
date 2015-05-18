@@ -84,13 +84,13 @@ If you don't know what other plugins are doing, you will find some other tasty f
 The following default shortcuts are set in the `.vimrc` file :
 
 - <kbd>F2</kbd> : Create a new tab
-- <kbd>F3</kbd> : Close the current tab
+- <kbd>F3</kbd> : Maximize/restore current window
 - <kbd>F4</kbd> : Enable search highlight
 - <kbd>F5</kbd> : Disable search highlight
 - <kbd>F6</kbd> : Show/hide the file tree
 - <kbd>F7</kbd> : Show/hide the undo tree
 - <kbd>F8</kbd> : Show/hide the tagbar (shown by default)
-- <kbd>F9</kbd> : Maximize/restore current window
+- <kbd>F9</kbd> : Close the current tab
 - <kbd>F10</kbd> : Align text using ',' as a delimiter
 - <kbd>F12</kbd> : Align text using space as a delimiter
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab

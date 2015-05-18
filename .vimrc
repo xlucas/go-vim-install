@@ -78,13 +78,12 @@ let g:syntastic_check_on_wq = 0
 
 " Shortcuts remap
 nmap  <F2>          :tabnew<CR>
-nmap  <F3>          :tabclose<CR>
 nmap  <F4>          :set hlsearch<CR>
 nmap  <F5>          :nohlsearch<CR>
 nmap  <F6>          :NERDTreeTabsToggle<CR>
 nmap  <F7>          :GundoToggle<CR>
 nmap  <F8>          :TagbarToggle<CR>
-nmap  <silent><F9>  :MaximizerToggle<CR>
+nmap  <F9>          :tabclose<CR>
 nmap  <F10>         :Tabularize /,\zs<CR>
 vmap  <F10>         :Tabularize /,\zs<CR>
 nmap  <F12>         :Tabularize / \zs<CR>

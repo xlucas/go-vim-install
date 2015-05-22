@@ -1,120 +1,122 @@
 #!/bin/bash
 
 install_go() {
-
-    wget -q -O - /tmp/golang.tar.gz "$1" | sudo tar -C /usr/local -xzvf -
-
-    echo "export PATH=\$PATH:/usr/local/go/bin" >> ~/.profile
-
+    curl -s "$1" | sudo tar -C /usr/local -xzvf -
+    echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
     exit 0
 }
 
-
 install_vim() {
+    dependencies=(
+        git
+        vim
+        build-essential
+        cmake
+        python-dev
+        python-pip
+        python-setuptools
+        ctags
+        xdg-utils
+        npm
+    )
 
-    cwd=$(pwd)
+    repositories=(
+        majutsushi/tagbar
+        fatih/vim-go
+        Valloric/YouCompleteMe
+        bling/vim-airline
+        tpope/vim-fugitive
+        scrooloose/nerdtree
+        jistr/vim-nerdtree-tabs
+        scrooloose/syntastic
+        ntpeters/vim-better-whitespace
+        sjl/gundo.vim
+        mattn/emmet-vim
+        Raimondi/delimitMate
+        szw/vim-maximizer
+        godlygeek/tabular
+        SirVer/ultisnips
+        suan/vim-instant-markdown
+    )
 
-    mv ~/.vimrc ~/.vimrc.old
+    # Backup
+    cp -f ~/.vimrc ~/.vimrc.old.$(date +%s)
 
-    # Basic requirements
-    sudo apt-get install -y git vim build-essential cmake python-dev python-pip python-setuptools ctags xdg-utils npm
+    # Install packages
+    sudo apt-get install -y ${dependencies[@]}
+
+    # Plugin manager bootstrap
     mkdir -p ~/.vim/{autoload,bundle,colors,scripts}
+    wget -P ~/.vim/autoload "https://tpo.pe/pathogen.vim"
+    wget -P ~/.vim/colors "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
 
-    # Pathogen
-    cd ~/.vim/autoload
-    curl -sLO "https://tpo.pe/pathogen.vim"
+    # Clone necessary stuff
+    for repository in ${repositories[@]} ; do
+        git clone "https://github.com/${repository}.git" ~/.vim/bundle/${repository#[^/]*/}
+    done
 
-    # Plugins
-    cd ~/.vim/bundle
-    git clone "https://github.com/majutsushi/tagbar.git"
-    git clone "https://github.com/fatih/vim-go.git"
-    git clone "https://github.com/Valloric/YouCompleteMe.git"
-    git clone "https://github.com/bling/vim-airline.git"
-    git clone "https://github.com/tpope/vim-fugitive.git"
-    git clone "https://github.com/scrooloose/nerdtree.git"
-    git clone "https://github.com/jistr/vim-nerdtree-tabs.git"
-    git clone "https://github.com/scrooloose/syntastic.git"
-    git clone "https://github.com/ntpeters/vim-better-whitespace.git"
-    git clone "https://github.com/sjl/gundo.vim.git"
-    git clone "https://github.com/mattn/emmet-vim.git"
-    git clone "https://github.com/Raimondi/delimitMate.git"
-    git clone "https://github.com/szw/vim-maximizer.git"
-    git clone "https://github.com/godlygeek/tabular.git"
-    git clone "https://github.com/SirVer/ultisnips.git"
-    git clone "https://github.com/suan/vim-instant-markdown.git"
+    # Closetag script and snippets
+    curl -sL -o ~/.vim/scripts/closetag.vim "http://vim.sourceforge.net/scripts/download_script.php?src_id=4318"
+    wget -P ~/.vim/bundle/vim-go/gosnippets/UltiSnips "https://raw.githubusercontent.com/xlucas/go-vim-install/master/go.snippets"
 
-    cd ~/.vim/bundle/YouCompleteMe
-    git submodule update --init --recursive
-    bash install.sh
-
-    # Colorscheme
-    cd ~/.vim/colors
-    curl -sLO "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
-
-    cd $cwd
-
-    # Closetag script
-    curl -sL "http://vim.sourceforge.net/scripts/download_script.php?src_id=4318" -o ~/.vim/scripts/closetag.vim
+    # YCM compilation
+    cd ~/.vim/bundle/YouCompleteMe && {
+        git submodule update --init --recursive
+        bash install.sh
+    } && cd -
 
     # Powerline
     pip install --user powerline-status
 
-    mkdir -p ~/.fonts/
-    mkdir -p ~/.config/fontconfig/conf.d/
-
+    # Fonts
+    mkdir -p ~/.{fonts,config/fontconfig/conf.d}
+    wget -L -O - "https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh" | bash
     wget -P ~/.fonts "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf"
     wget -P ~/.config/fontconfig/conf.d "https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf"
-
     fc-cache -vf ~/.fonts
-
-    # Monaco font
-    wget -L -O - https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
-
-    echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.profile
-
-    # Snippets
-    curl -sL -o ~/.vim/bundle/vim-go/gosnippets/UltiSnips/go.snippets "https://raw.githubusercontent.com/xlucas/go-vim-install/master/go.snippets"
 
     # Instant markdown
     sudo npm -g install instant-markdown-d
 
     # Vimrc
-    curl -sL -o ~/.vimrc "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
+    wget -P ~ "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
 
+    # Path
+    echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.profile
     exit 0
 }
 
 
 install_ws() {
+    dependencies=(
+        github.com/axw/gocov/gocov
+        github.com/jstemmer/gotags
+        github.com/nsf/gocode
+        github.com/rogpeppe/godef
+        golang.org/x/tools/cmd/goimports
+        golang.org/x/tools/cmd/oracle
+        golang.org/x/tools/cmd/gorename
+        github.com/golang/lint/golint
+        github.com/kisielk/errcheck
+    )
 
-    cwd=$(pwd)
-
+    # Prepare workspace path
     mkdir -p $1
-
     echo "export GOPATH=$1"             >> ~/.profile
     echo "export PATH=\$PATH:$1/bin"    >> ~/.profile
-
     . ~/.profile
 
-    cd $GOPATH
+    # Download dependencies
+    cd ${GOPATH}
+    for dependency in ${dependencies[@]} ; do
+        go get ${dependency}
+    done
 
-    go get github.com/axw/gocov/gocov
-    go get github.com/jstemmer/gotags
-    go get github.com/nsf/gocode
-    go get github.com/rogpeppe/godef
-    go get golang.org/x/tools/cmd/goimports
-    go get golang.org/x/tools/cmd/oracle
-    go get golang.org/x/tools/cmd/gorename
-    go get github.com/golang/lint/golint
-    go get github.com/kisielk/errcheck
-
-    cd $cwd
-
+    cd -
     exit 0
 }
 
-
-
+# Main
 case $1 in
 "-go")    install_go  $2;;
 "-vim")   install_vim $2;;

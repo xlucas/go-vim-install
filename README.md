@@ -100,3 +100,18 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>CTRL</kbd> + <kbd>j</kbd> : Expand snippet
 - <kbd>CTRL</kbd> + <kbd>n</kbd> : Go to next snippet item 
 - <kbd>CTRL</kbd> + <kbd>p</kbd> : Go to previous snippet item
+- leader + <kbd>b</kbd> : Go build
+- leader + <kbd>c</kbd> : Go coverage
+- leader + <kbd>l</kbd> : Go lint
+- leader + <kbd>p</kbd> : Show interface implementing the type under the cursor
+- leader + <kbd>r</kbd> : Go run
+- leader + <kbd>t</kbd> : Go test
+- leader + <kbd>v</kbd> : Go vet
+- leader + <kbd>ds</kbd> : Open declaration of word under cursor in new split window
+- leader + <kbd>dv</kbd> : Open declaration of word under cursor in new vertical window
+- leader + <kbd>dt</kbd> : Open declaration of word under cursor in new tab
+- leader + <kbd>gs</kbd> : Open godoc of word under cursor in new split window
+- leader + <kbd>gv</kbd> : Open godoc of word under cursor in new vertical window
+- leader + <kbd>r</kbd> : Open godoc of word under cursor in browser
+- leader + <kbd>i</kbd> : Show type info of word under cursor
+- leader + <kbd>e</kbd> : Rename word under cursor

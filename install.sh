@@ -97,6 +97,7 @@ install_ws() {
         golang.org/x/tools/cmd/oracle
         golang.org/x/tools/cmd/gorename
         github.com/golang/lint/golint
+        golang.org/x/tools/cmd/godoc
         github.com/kisielk/errcheck
     )
 

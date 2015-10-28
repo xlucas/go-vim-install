@@ -4,7 +4,6 @@ set tabstop=4
 set expandtab
 set number
 set selection=exclusive
-set shell=/bin/bash
 set autoindent
 set autoread
 set showcmd
@@ -18,7 +17,9 @@ colorscheme molokai
 " Closetag script
 autocmd Filetype html let g:closetag_html_style=1
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
+autocmd FileType ruby setl nowrap sw=2 sts=2 et
 autocmd BufWritePost *.go :GoInstall
+autocmd FileType qf wincmd J
 
 " Pathogen
 execute pathogen#infect()
@@ -73,6 +74,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_reuse_loc_lists = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
@@ -97,8 +99,11 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>l :GoLint<CR>
+au FileType go nmap <Leader>p <Plug>(go-implements)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>v <Plug>(go-vet)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)

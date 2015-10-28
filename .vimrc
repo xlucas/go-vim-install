@@ -9,6 +9,7 @@ set autoindent
 set autoread
 set showcmd
 set nocompatible
+set relativenumber
 
 " Syntax highlighting
 syntax on
@@ -90,3 +91,17 @@ nmap  <F12>         :Tabularize / \zs<CR>
 vmap  <F12>         :Tabularize / \zs<CR>
 nmap  <C-Down>      :tabprevious<CR>
 nmap  <C-Up>        :tabnext<CR>
+
+" Go-Specific
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>gs <Plug>(go-doc-split)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)

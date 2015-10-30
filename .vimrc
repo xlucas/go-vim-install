@@ -9,6 +9,7 @@ set autoread
 set showcmd
 set nocompatible
 set relativenumber
+set nrformats-=octal
 
 " Syntax highlighting
 syntax on
@@ -74,10 +75,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_reuse_loc_lists = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_reuse_loc_lists = 0
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gometalinter', 'govet']
 
 " Shortcuts remap
 nmap  <F2>          :tabnew<CR>
@@ -93,6 +96,8 @@ nmap  <F12>         :Tabularize / \zs<CR>
 vmap  <F12>         :Tabularize / \zs<CR>
 nmap  <C-Down>      :tabprevious<CR>
 nmap  <C-Up>        :tabnext<CR>
+nmap  f             :lnext<CR>
+nmap  F             :lprevious<CR>
 
 " Go-Specific
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -100,7 +105,7 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <leader>l :GoLint<CR>
-au FileType go nmap <Leader>p <Plug>(go-implements)
+au FileType go nmap <Leader>g <Plug>(go-implements)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>v <Plug>(go-vet)

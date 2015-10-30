@@ -93,6 +93,8 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F9</kbd> : Close the current tab
 - <kbd>F10</kbd> : Align text using ',' as a delimiter
 - <kbd>F12</kbd> : Align text using space as a delimiter
+- <kbd>f</kbd> : Jump to next warning/error
+- <kbd>F</kbd> : Jump to previous warning/error
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 - <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding
@@ -103,6 +105,8 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>b</kbd> : Go build
 - leader + <kbd>c</kbd> : Go coverage
 - leader + <kbd>l</kbd> : Go lint
+- leader + <kbd>i</kbd> : Show type info of word under cursor
+- leader + <kbd>e</kbd> : Rename word under cursor
 - leader + <kbd>p</kbd> : Show interface implementing the type under the cursor
 - leader + <kbd>r</kbd> : Go run
 - leader + <kbd>t</kbd> : Go test
@@ -112,6 +116,4 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>dt</kbd> : Open declaration of word under cursor in new tab
 - leader + <kbd>gs</kbd> : Open godoc of word under cursor in new split window
 - leader + <kbd>gv</kbd> : Open godoc of word under cursor in new vertical window
-- leader + <kbd>r</kbd> : Open godoc of word under cursor in browser
-- leader + <kbd>i</kbd> : Show type info of word under cursor
-- leader + <kbd>e</kbd> : Rename word under cursor
+- leader + <kbd>gb</kbd> : Open godoc of word under cursor in browser

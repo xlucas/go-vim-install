@@ -80,7 +80,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gometalinter', 'govet']
+let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet']
 
 " Shortcuts remap
 nmap  <F2>          :tabnew<CR>

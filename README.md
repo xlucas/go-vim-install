@@ -108,6 +108,7 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>i</kbd> : Show type info of word under cursor
 - leader + <kbd>e</kbd> : Rename word under cursor
 - leader + <kbd>p</kbd> : Show interface implementing the type under the cursor
+- leader + <kbd>q</kbd> : Import package (type package name)
 - leader + <kbd>r</kbd> : Go run
 - leader + <kbd>t</kbd> : Go test
 - leader + <kbd>v</kbd> : Go vet

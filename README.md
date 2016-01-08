@@ -53,6 +53,7 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [tabular](https://github.com/godlygeek/tabular)
 - [ultisnips](https://github.com/sirver/ultisnips)
 - [vim-instant-markdown](https://github.com/suan/vim-instant-markdown)
+- [ctrlp](https://github.com/kien/ctrlp.vim)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 

@@ -37,6 +37,7 @@ install_vim() {
         godlygeek/tabular
         SirVer/ultisnips
         suan/vim-instant-markdown
+        kien/ctrlp.vim
     )
 
     # Backup

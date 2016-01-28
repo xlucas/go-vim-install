@@ -10,21 +10,24 @@ set showcmd
 set nocompatible
 set relativenumber
 set nrformats-=octal
-
-" Syntax highlighting
-syntax on
-colorscheme molokai
+set scrolloff=30
 
 " Closetag script
 autocmd Filetype html let g:closetag_html_style=1
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 autocmd FileType ruby setl nowrap sw=2 sts=2 et
-autocmd BufWritePost *.go :GoInstall
 autocmd FileType qf wincmd J
 
 " Pathogen
 execute pathogen#infect()
 filetype plugin indent on
+
+" Syntax highlighting
+syntax enable
+colorscheme molokai
+
+" Ag
+let g:ag_working_path_mode="r"
 
 " Tagbar plugin
 autocmd VimEnter * nested :TagbarOpen
@@ -96,8 +99,13 @@ nmap  <F12>         :Tabularize / \zs<CR>
 vmap  <F12>         :Tabularize / \zs<CR>
 nmap  <C-Down>      :tabprevious<CR>
 nmap  <C-Up>        :tabnext<CR>
-nmap  f             :lnext<CR>
-nmap  F             :lprevious<CR>
+
+" Developper
+nmap f :lnext<CR>
+nmap F :lprevious<CR>
+
+" Search
+nmap <leader>a :Ag<space>
 
 " Go-Specific
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -105,9 +113,10 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <leader>l :GoLint<CR>
-au FileType go nmap <Leader>g <Plug>(go-implements)
 au FileType go nmap <leader>q :GoImport<space>
+au FileType go nmap <Leader>g <Plug>(go-implements)
 au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <Leader>s <Plug>(go-install)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>v <Plug>(go-vet)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)

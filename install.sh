@@ -18,6 +18,7 @@ install_vim() {
         ctags
         xdg-utils
         npm
+        silversearcher-ag
     )
 
     repositories=(
@@ -38,6 +39,8 @@ install_vim() {
         SirVer/ultisnips
         suan/vim-instant-markdown
         kien/ctrlp.vim
+        rking/ag.vim
+        airblade/vim-gitgutter
     )
 
     # Backup

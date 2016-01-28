@@ -54,6 +54,8 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [ultisnips](https://github.com/sirver/ultisnips)
 - [vim-instant-markdown](https://github.com/suan/vim-instant-markdown)
 - [ctrlp](https://github.com/kien/ctrlp.vim)
+- [ag.vim](https://github.com/rking/ag.vim.git)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter.git)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
@@ -96,21 +98,25 @@ The following default shortcuts are set in the `.vimrc` file :
 - <kbd>F12</kbd> : Align text using space as a delimiter
 - <kbd>f</kbd> : Jump to next warning/error
 - <kbd>F</kbd> : Jump to previous warning/error
+- <kbd>]c</kbd> : Go to next hunk
+- <kbd>[c</kbd> : Go to previous hunk
 - <kbd>CTRL</kbd> + <kbd>Up</kbd> : Go to the next tab
 - <kbd>CTRL</kbd> + <kbd>Down</kbd> : Go to the previous tab
 - <kbd>CTRL</kbd> + <kbd>C</kbd> + <kbd>,</kbd> : Format Zen Coding
-- <kbd>CTRL</kbd> + <kbd>_</kbd> : Autoclose xml/html tag(s) (repeat to close several ones)
+- <kbd>CTRL</kbd> + <kbd>\_</kbd> : Autoclose xml/html tag(s) (repeat to close several ones)
 - <kbd>CTRL</kbd> + <kbd>j</kbd> : Expand snippet
-- <kbd>CTRL</kbd> + <kbd>n</kbd> : Go to next snippet item 
+- <kbd>CTRL</kbd> + <kbd>n</kbd> : Go to next snippet item
 - <kbd>CTRL</kbd> + <kbd>p</kbd> : Go to previous snippet item
+- leader + <kbd>a</kbd> : Search for a word recursively from project's root directory
 - leader + <kbd>b</kbd> : Go build
 - leader + <kbd>c</kbd> : Go coverage
 - leader + <kbd>l</kbd> : Go lint
 - leader + <kbd>i</kbd> : Show type info of word under cursor
 - leader + <kbd>e</kbd> : Rename word under cursor
-- leader + <kbd>p</kbd> : Show interface implementing the type under the cursor
+- leader + <kbd>g</kbd> : Show interface implementing the type under the cursor
 - leader + <kbd>q</kbd> : Import package (type package name)
 - leader + <kbd>r</kbd> : Go run
+- leader + <kbd>s</kbd> : Go install
 - leader + <kbd>t</kbd> : Go test
 - leader + <kbd>v</kbd> : Go vet
 - leader + <kbd>ds</kbd> : Open declaration of word under cursor in new split window
@@ -119,3 +125,6 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>gs</kbd> : Open godoc of word under cursor in new split window
 - leader + <kbd>gv</kbd> : Open godoc of word under cursor in new vertical window
 - leader + <kbd>gb</kbd> : Open godoc of word under cursor in browser
+- leader + <kbd>hp</kbd> : Preview current hunk
+- leader + <kbd>hr</kbd> : Revert current hunk
+- leader + <kbd>hs</kbd> : Stage current hunk

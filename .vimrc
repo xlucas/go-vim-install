@@ -26,8 +26,16 @@ filetype plugin indent on
 syntax enable
 colorscheme molokai
 
+" Easygrep
+let g:EasyGrepRecursive=1
+
 " Ag
 let g:ag_working_path_mode="r"
+
+" Grammarous
+let g:grammarous#default_comments_only_filetypes = {
+ \ '*' : 1, 'help' : 0, 'markdown' : 0,
+ \ }
 
 " Tagbar plugin
 autocmd VimEnter * nested :TagbarOpen
@@ -103,9 +111,23 @@ nmap  <C-Up>        :tabnext<CR>
 " Developper
 nmap f :lnext<CR>
 nmap F :lprevious<CR>
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+
+" Grammar
+nmap <Leader>g :GrammarousCheck<CR>
+nmap <Leader>ga <Plug>(grammarous-fixall)
+nmap <Leader>gf <Plug>(grammarous-fixit)
+nmap <Leader>gr <Plug>(grammarous-remove-error)
+nmap <Leader>gd <Plug>(grammarous-disable-rule)
+nmap ù <Plug>(grammarous-move-to-next-error)
+nmap % <Plug>(grammarous-move-to-previous-error)
 
 " Search
+nmap <Leader><Leader>s :%s/\<<C-r><C-w>\>/
+nmap <Leader><Leader>u :Unite<space>
 nmap <leader>a :Ag<space>
+nmap <leader>aa :Ag <C-r><C-w><CR>
 
 " Go-Specific
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -114,7 +136,7 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <leader>l :GoLint<CR>
 au FileType go nmap <leader>q :GoImport<space>
-au FileType go nmap <Leader>g <Plug>(go-implements)
+au FileType go nmap <Leader>f <Plug>(go-implements)
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <Leader>s <Plug>(go-install)
 au FileType go nmap <leader>t <Plug>(go-test)

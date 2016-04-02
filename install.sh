@@ -40,7 +40,10 @@ install_vim() {
         suan/vim-instant-markdown
         kien/ctrlp.vim
         rking/ag.vim
+        rhysd/vim-grammarous
         airblade/vim-gitgutter
+        dkprice/vim-easygrep
+        nelstrom/vim-qargs
     )
 
     # Backup

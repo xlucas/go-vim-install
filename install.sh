@@ -19,6 +19,7 @@ install_vim() {
         xdg-utils
         npm
         silversearcher-ag
+        openjdk-8-jre
     )
 
     repositories=(

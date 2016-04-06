@@ -10,13 +10,13 @@ set showcmd
 set nocompatible
 set relativenumber
 set nrformats-=octal
-set scrolloff=30
 
 " Closetag script
 autocmd Filetype html let g:closetag_html_style=1
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
 autocmd FileType ruby setl nowrap sw=2 sts=2 et
 autocmd FileType qf wincmd J
+au BufEnter * set scrolloff=30
 
 " Pathogen
 execute pathogen#infect()

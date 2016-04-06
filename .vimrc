@@ -85,13 +85,20 @@ let g:instant_markdown_autostart = 0
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_reuse_loc_lists = 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
+let g:go_list_type='quickfix'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet']
+
+" Exit if quickfix is last window
+au BufEnter * call MyLastWindow()
+function! MyLastWindow()
+    " if the window is quickfix go on
+    if &buftype=="quickfix"
+        " if this window is last on screen quit without warning
+        if winbufnr(2) == -1
+            quit!
+        endif
+    endif
+endfunction
 
 " Shortcuts remap
 nmap  <F2>          :tabnew<CR>

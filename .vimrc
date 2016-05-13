@@ -131,7 +131,7 @@ nmap ù <Plug>(grammarous-move-to-next-error)
 nmap % <Plug>(grammarous-move-to-previous-error)
 
 " Search
-nmap <Leader><Leader>s :%s/\<<C-r><C-w>\>/
+nmap <Leader><Leader>s :%s/<C-r><C-w>/
 nmap <leader>a :Ag<space>
 nmap <leader>aa :Ag <C-r><C-w><CR>
 

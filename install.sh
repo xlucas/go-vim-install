@@ -45,6 +45,8 @@ install_vim() {
         airblade/vim-gitgutter
         dkprice/vim-easygrep
         nelstrom/vim-qargs
+        junegunn/vim-easy-align
+        terryma/vim-multiple-cursors
     )
 
     # Backup

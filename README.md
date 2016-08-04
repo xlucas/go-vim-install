@@ -59,6 +59,8 @@ The script will install [pathogen](https://github.com/tpope/vim-pathogen) and th
 - [vim-qargs](https://github.com/nelstrom/vim-qargs)
 - [vim-easygrep](https://github.com/dkprice/vim-easygrep)
 - [vim-grammarous](https://github.com/rhysd/vim-grammarous)
+- [vim-easy-align](https://github.com/junegunn/vim-easy-align)
+- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 
 The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molokai).
 
@@ -119,8 +121,8 @@ The following default shortcuts are set in the `.vimrc` file :
 
 ### Grammar
 - leader + <kbd>g</kbd> : Run a grammar check
-- <kbd>ù</kbd> : Go to next grammar error
-- <kbd>%</kbd> : Go to previous grammar error
+- <kbd>!</kbd> : Go to next grammar error
+- <kbd>§</kbd> : Go to previous grammar error
 - leader + <kbd>ga</kbd> : Fix all grammar errors automatically
 - leader + <kbd>gf</kbd> : Fix this grammar error
 - leader + <kbd>gr</kbd> : Remove this grammar error
@@ -134,8 +136,8 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>hs</kbd> : Stage current git hunk
 
 ### Go code
-- <kbd>f</kbd> : Jump to next warning/error
-- <kbd>F</kbd> : Jump to previous warning/error
+- <kbd>,</kbd> : Jump to next warning/error
+- <kbd>?</kbd> : Jump to previous warning/error
 - leader + <kbd>b</kbd> : Go build
 - leader + <kbd>c</kbd> : Go coverage
 - leader + <kbd>l</kbd> : Go lint

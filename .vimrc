@@ -14,9 +14,11 @@ set nrformats-=octal
 " Closetag script
 autocmd Filetype html let g:closetag_html_style=1
 autocmd Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
-autocmd FileType ruby setl nowrap sw=2 sts=2 et
+autocmd FileType ruby,yaml setl nowrap sw=2 sts=2 et
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType qf wincmd J
 au BufEnter * set scrolloff=30
+au VimLeave * !resetcolor
 
 " Pathogen
 execute pathogen#infect()
@@ -116,40 +118,44 @@ nmap  <C-Down>      :tabprevious<CR>
 nmap  <C-Up>        :tabnext<CR>
 
 " Developper
-nmap f :lnext<CR>
-nmap F :lprevious<CR>
+nmap , :lnext<CR>
+nmap ? :lprevious<CR>
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
 
 " Grammar
-nmap <Leader>g :GrammarousCheck<CR>
-nmap <Leader>ga <Plug>(grammarous-fixall)
-nmap <Leader>gf <Plug>(grammarous-fixit)
-nmap <Leader>gr <Plug>(grammarous-remove-error)
-nmap <Leader>gd <Plug>(grammarous-disable-rule)
-nmap ù <Plug>(grammarous-move-to-next-error)
-nmap % <Plug>(grammarous-move-to-previous-error)
+nmap <leader>g :GrammarousCheck<CR>
+nmap <leader>ga <Plug>(grammarous-fixall)
+nmap <leader>gf <Plug>(grammarous-fixit)
+nmap <leader>gr <Plug>(grammarous-remove-error)
+nmap <leader>gd <Plug>(grammarous-disable-rule)
+nmap ! <Plug>(grammarous-move-to-next-error)
+nmap § <Plug>(grammarous-move-to-previous-error)
 
 " Search
-nmap <Leader><Leader>s :%s/<C-r><C-w>/
-nmap <leader>a :Ag<space>
+nmap <leader><leader>s :%s/<C-r><C-w>/
+nmap <leader><leader>a :Ag<space>
 nmap <leader>aa :Ag <C-r><C-w><CR>
+
+" Easy Align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " Go-Specific
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>e <Plug>(go-rename)
+au FileType go nmap <leader>i <Plug>(go-info)
 au FileType go nmap <leader>l :GoLint<CR>
 au FileType go nmap <leader>q :GoImport<space>
-au FileType go nmap <Leader>f <Plug>(go-implements)
+au FileType go nmap <leader>f <Plug>(go-implements)
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <Leader>s <Plug>(go-install)
+au FileType go nmap <leader>s <Plug>(go-install)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>v <Plug>(go-vet)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <Leader>gs <Plug>(go-doc-split)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>ds <Plug>(go-def-split)
+au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <leader>dt <Plug>(go-def-tab)
+au FileType go nmap <leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>gs <Plug>(go-doc-split)
+au FileType go nmap <leader>gv <Plug>(go-doc-vertical)

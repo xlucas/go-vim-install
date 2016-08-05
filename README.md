@@ -143,9 +143,11 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>l</kbd> : Go lint
 - leader + <kbd>i</kbd> : Show type info of word under cursor
 - leader + <kbd>e</kbd> : Rename word under cursor
-- leader + <kbd>f</kbd> : Show interface implementing the type under the cursor
+- leader + <kbd>f</kbd> : Implement an interface
+- leader + <kbd>ff</kbd> : Show interface implementing the type under the cursor
+- leader + <kbd>p</kbd> : Share selection in the go playground
 - leader + <kbd>q</kbd> : Import package (type package name)
-- leader + <kbd>r</kbd> : Go run
+- leader + <kbd>r</kbd> : Go run (normal mode) / Add tags to a selected struct (visual mode)
 - leader + <kbd>s</kbd> : Go install
 - leader + <kbd>t</kbd> : Go test
 - leader + <kbd>v</kbd> : Go vet

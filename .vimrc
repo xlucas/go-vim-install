@@ -148,7 +148,10 @@ au FileType go nmap <leader>e <Plug>(go-rename)
 au FileType go nmap <leader>i <Plug>(go-info)
 au FileType go nmap <leader>l :GoLint<CR>
 au FileType go nmap <leader>q :GoImport<space>
-au FileType go nmap <leader>f <Plug>(go-implements)
+au FileType go nmap <Leader>f <Plug>:GoImpl<space>
+au FileType go nmap <leader>ff <Plug>(go-implements)
+au FileType go vmap <leader>r :GoAddTags<space>
+au FileType go vmap <leader>p :GoPlay<CR>
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>s <Plug>(go-install)
 au FileType go nmap <leader>t <Plug>(go-test)

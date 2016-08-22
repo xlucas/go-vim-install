@@ -89,6 +89,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:go_list_type='quickfix'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet']
+let g:syntastic_ignore_files = ['\.s$']
 
 " Exit if quickfix is last window
 au BufEnter * call MyLastWindow()

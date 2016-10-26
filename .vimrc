@@ -18,7 +18,7 @@ autocmd FileType ruby,yaml setl nowrap sw=2 sts=2 et
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType qf wincmd J
 au BufEnter * set scrolloff=30
-au VimLeave * !resetcolor
+au VimLeave * !echo -ne "\033[0m"
 
 " Pathogen
 execute pathogen#infect()

@@ -1,0 +1,10 @@
+github.com/axw/gocov/gocov
+github.com/jstemmer/gotags
+github.com/nsf/gocode
+github.com/rogpeppe/godef
+golang.org/x/tools/cmd/goimports
+golang.org/x/tools/cmd/oracle
+golang.org/x/tools/cmd/gorename
+github.com/golang/lint/golint
+golang.org/x/tools/cmd/godoc
+github.com/kisielk/errcheck

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DEPS_URL="https://raw.githubusercontent.com/xlucas/go-vim-install/master/deps"
+
 install_go() {
     curl -s "$1" | sudo tar -C /usr/local -xzvf -
     echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
@@ -7,53 +9,14 @@ install_go() {
 }
 
 install_vim() {
-    dependencies=(
-        git
-        vim
-        build-essential
-        cmake
-        python-dev
-        python-pip
-        python-setuptools
-        ctags
-        xdg-utils
-        npm
-        silversearcher-ag
-        openjdk-8-jre
-    )
-
-    repositories=(
-        majutsushi/tagbar
-        fatih/vim-go
-        Valloric/YouCompleteMe
-        bling/vim-airline
-        tpope/vim-fugitive
-        scrooloose/nerdtree
-        jistr/vim-nerdtree-tabs
-        scrooloose/syntastic
-        ntpeters/vim-better-whitespace
-        sjl/gundo.vim
-        mattn/emmet-vim
-        Raimondi/delimitMate
-        szw/vim-maximizer
-        godlygeek/tabular
-        SirVer/ultisnips
-        suan/vim-instant-markdown
-        kien/ctrlp.vim
-        rking/ag.vim
-        rhysd/vim-grammarous
-        airblade/vim-gitgutter
-        dkprice/vim-easygrep
-        nelstrom/vim-qargs
-        junegunn/vim-easy-align
-        terryma/vim-multiple-cursors
-    )
+    packages=$(curl -s "$DEPS_URL/ubuntu_packages")
+    plugins=$(curl -s "$DEPS_URL/vim_plugins")
 
     # Backup
     cp -f ~/.vimrc ~/.vimrc.old.$(date +%s)
 
     # Install packages
-    sudo apt-get install -y ${dependencies[@]}
+    sudo apt-get install -y ${packages[@]}
 
     # Plugin manager bootstrap
     mkdir -p ~/.vim/{autoload,bundle,colors,scripts}
@@ -61,8 +24,8 @@ install_vim() {
     wget -P ~/.vim/colors "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
 
     # Clone necessary stuff
-    for repository in ${repositories[@]} ; do
-        git clone "https://github.com/${repository}.git" ~/.vim/bundle/${repository#[^/]*/}
+    for plugin in ${plugins[@]} ; do
+        git clone "${plugin}.git" ~/.vim/bundle/${plugin#[^/]*/}
     done
 
     # Closetag script and snippets
@@ -98,18 +61,7 @@ install_vim() {
 
 
 install_ws() {
-    dependencies=(
-        github.com/axw/gocov/gocov
-        github.com/jstemmer/gotags
-        github.com/nsf/gocode
-        github.com/rogpeppe/godef
-        golang.org/x/tools/cmd/goimports
-        golang.org/x/tools/cmd/oracle
-        golang.org/x/tools/cmd/gorename
-        github.com/golang/lint/golint
-        golang.org/x/tools/cmd/godoc
-        github.com/kisielk/errcheck
-    )
+    packages=$(curl -s "$RAW_URL/go_packages")
 
     # Prepare workspace path
     mkdir -p $1
@@ -119,8 +71,8 @@ install_ws() {
 
     # Download dependencies
     cd ${GOPATH}
-    for dependency in ${dependencies[@]} ; do
-        go get ${dependency}
+    for package in ${packages[@]} ; do
+        go get ${package}
     done
 
     cd -

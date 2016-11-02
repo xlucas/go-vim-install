@@ -1,4 +1,7 @@
 # go-vim-install
+
+[![Build Status](https://travis-ci.org/xlucas/go-vim-install.svg?branch=master)](https://travis-ci.org/xlucas/go-vim-install)
+
 Easy environment setup for Vim addicts and go developers on Ubuntu.
 
 ## Install

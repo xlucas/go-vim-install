@@ -1,6 +1,8 @@
 #!/bin/bash
 
-DEPS_URL="https://raw.githubusercontent.com/xlucas/go-vim-install/master/deps"
+REPO_URL="https://raw.githubusercontent.com/xlucas/go-vim-install/master"
+DEPS_URL="$REPO_URL/deps"
+RESR_URL="$REPO_URL/resources"
 
 install_go() {
     curl -s "$1" | sudo tar -C /usr/local -xzvf -
@@ -21,7 +23,7 @@ install_vim() {
     # Plugin manager bootstrap
     mkdir -p ~/.vim/{autoload,bundle,colors,scripts}
     wget -P ~/.vim/autoload "https://tpo.pe/pathogen.vim"
-    wget -P ~/.vim/colors "https://raw.githubusercontent.com/xlucas/go-vim-install/master/molokai.vim"
+    wget -P ~/.vim/colors "$RESR_URL/molokai.vim"
 
     # Clone necessary stuff
     for plugin in ${plugins[@]} ; do
@@ -30,7 +32,7 @@ install_vim() {
 
     # Closetag script and snippets
     curl -sL -o ~/.vim/scripts/closetag.vim "http://vim.sourceforge.net/scripts/download_script.php?src_id=4318"
-    wget -P ~/.vim/bundle/vim-go/gosnippets/UltiSnips "https://raw.githubusercontent.com/xlucas/go-vim-install/master/go.snippets"
+    wget -P ~/.vim/bundle/vim-go/gosnippets/UltiSnips "$RESR_URL/go.snippets"
 
     # YCM compilation
     cd ~/.vim/bundle/YouCompleteMe && {
@@ -52,7 +54,7 @@ install_vim() {
     sudo npm -g install instant-markdown-d
 
     # Vimrc
-    wget -P ~ "https://raw.githubusercontent.com/xlucas/go-vim-install/master/.vimrc"
+    wget -P ~ "$RESR_URL/.vimrc"
 
     # Path
     echo "export PATH=\$PATH:$(readlink -f ~/.local/bin)" >> ~/.profile

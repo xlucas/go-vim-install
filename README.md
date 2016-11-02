@@ -66,7 +66,7 @@ The colorscheme bundled is a variant of [molokai](https://github.com/fatih/molok
 
 Here's a screenshot of what the environment will look like :
 
-![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/screenshot.png)
+![go-vim-install](https://raw.githubusercontent.com/xlucas/go-vim-install/master/doc/screenshot.png)
 
 The script will install the Monaco font. Set it with a size between 11 and 12 in your terminal configuration.
 

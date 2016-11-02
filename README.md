@@ -81,7 +81,7 @@ The script will install these packages in your workspace :
 - [gocode](https://github.com/nsf/gocode)
 - [godef](https://github.com/rogpeppe/godef)
 - [goimports](https://golang.org/x/tools/cmd/goimports)
-- [oracle](https://golang.org/x/tools/cmd/oracle)
+- [guru](https://golang.org/x/tools/cmd/guru)
 - [gorename](https://golang.org/x/tools/cmd/gorename)
 - [golint](https://github.com/golang/lint)
 - [errcheck](https://github.com/kisielk/errcheck)

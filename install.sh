@@ -27,7 +27,8 @@ install_vim() {
 
     # Clone necessary stuff
     for plugin in ${plugins[@]} ; do
-        git clone "${plugin}.git" ~/.vim/bundle/${plugin#[^/]*/}
+        echo "INSTALLING plugin $plugin"
+        git clone "https://${plugin}.git" ~/.vim/bundle/${plugin##*/}
     done
 
     # Closetag script and snippets
@@ -45,7 +46,7 @@ install_vim() {
 
     # Fonts
     mkdir -p ~/.{fonts,config/fontconfig/conf.d}
-    wget -L -O - "https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh" | bash
+    wget -P ~/.fonts "http://jorrel.googlepages.com/Monaco_Linux.ttf"
     wget -P ~/.fonts "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf"
     wget -P ~/.config/fontconfig/conf.d "https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf"
     fc-cache -vf ~/.fonts

@@ -90,6 +90,7 @@ set statusline+=%*
 let g:go_list_type='quickfix'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'govet']
 let g:syntastic_ignore_files = ['\.s$']
+let g:syntastic_always_populate_loc_list = 1
 
 " Exit if quickfix is last window
 au BufEnter * call MyLastWindow()
@@ -143,6 +144,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Go-Specific
+au FileType go nmap gi <Plug>(go-install)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <leader>e <Plug>(go-rename)

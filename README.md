@@ -141,6 +141,7 @@ The following default shortcuts are set in the `.vimrc` file :
 ### Go code
 - <kbd>,</kbd> : Jump to next warning/error
 - <kbd>?</kbd> : Jump to previous warning/error
+- <kbd>gi</kbd> : Go install
 - leader + <kbd>b</kbd> : Go build
 - leader + <kbd>c</kbd> : Go coverage
 - leader + <kbd>l</kbd> : Go lint

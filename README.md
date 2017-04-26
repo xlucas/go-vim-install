@@ -132,8 +132,8 @@ The following default shortcuts are set in the `.vimrc` file :
 - leader + <kbd>gd</kbd> : Disable this grammar rule
 
 ### Git
-- <kbd>]c</kbd> : Go to next hunk
-- <kbd>[c</kbd> : Go to previous hunk
+- <kbd>]h</kbd> : Go to next hunk
+- <kbd>[h</kbd> : Go to previous hunk
 - leader + <kbd>hp</kbd> : Preview current git hunk
 - leader + <kbd>hr</kbd> : Revert current git hunk
 - leader + <kbd>hs</kbd> : Stage current git hunk

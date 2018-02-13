@@ -2,32 +2,53 @@
 
 priority -10
 
-snippet come "Comment surrounded with equals"
+snippet com "Simple comment"
+// $1
+endsnippet
+
+snippet comb "Comment including a BUG statement"
+// BUG($1): $2
+endsnippet
+
+snippet comc "Comment embedding a code block"
+// $1
+//	// $2
+endsnippet
+
+snippet comd "Comment including a Deprecated statement"
+// Deprecated: $1
+endsnippet
+
+snippet comse "Small comment block surrounded by equals"
 //===========================
-//  $1
+// $1
 //===========================
 endsnippet
 
-snippet comel "Large comment surrounded with equals"
+snippet comle "Large comment block surrounded by equals"
 //===========================
 //
-//  $1
+// $1
 //
 //===========================
 endsnippet
 
-snippet comd "Comment surrounded with dashes"
+snippet comsd "Small comment block surrounded by dashes"
 //---------------------------
-//  $1
+// $1
 //---------------------------
 endsnippet
 
-snippet comdl "Large comment surrounded with dashes"
+snippet comld "Large comment block surrounded by dashes"
 //---------------------------
 //
-//  $1
+// $1
 //
 //---------------------------
+endsnippet
+
+snippet comsb "Small comment block between square brackets"
+// ---- [$1] ----
 endsnippet
 
 snippet todo "TODO comment"
